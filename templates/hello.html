@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>AHL Homework</title>
+  <meta name="description" content="A tiny web app">
+  <meta name="author" content="Charlie Smith">
+
+</head>
+
+<body>
+  <p>World!</p>
+  <button onclick="getProfit()">Click?? me for profit!</button>
+  <script type="text/javascript">
+      function getProfit() {
+          console.log('Getting profit')
+          var req = new XMLHttpRequest();
+          req.open("post", "/get-profit");
+          req.setRequestHeader("X-CSRFToken", "{{ csrf_token() }}");
+          req.send();
+      }
+  </script>
+</body>
+
+</html>
