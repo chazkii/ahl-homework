@@ -13,7 +13,7 @@ Please provide in that repository a Dockerfile that packages this application in
 ## Usage
 
 ```bash
-docker build -t ahl
+docker build -t ahl .
 docker run --init -it --rm -p=12345:5000 ahl
 ```
 ## Some design notes
